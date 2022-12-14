@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <script src="js/validarCEP.js"></script>
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <title>Cadastro de Paciente</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="img/Health-professional-team-pana.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="#" method="get" action=".">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastro de cliente</h1>
+                    </div>  
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" name="name" id="nameCli" placeholder="Digite o nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="date">Data de Nascimento</label>
+                        <input type="date" name="dataNasc" id="dataNasc" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">C.P.F.</label>
+                        <input type="text" name="cpfCli" id="cpfCli" placeholder="Digite o CPF" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RG">RG</label>
+                        <input type="text" name="rg" id="rgCli" placeholder="Digite o RG" required>
+                    </div>
+
+                    <div class="gerder-inputs">
+                        <div class="gerder-title">
+                            <h6>Gênero</h6>
+                        </div>
+
+                        <div class="gender-group">
+
+                            <div class="gender-input">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Masculino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Feminino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="others" name="gender">
+                                <label for="others">Outros</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="none" name="gender">
+                                <label for="none">Prefiro não informar</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label class="estadoCivil">Estado Civil </label>
+                        <select name="estadoCivil" id="estadoCivil">
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>
+                            <option value="viuvo">Viuvo(a)</option>
+                          </select>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label>Cep:</label>
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Rua:</label>
+                        <input name="rua" type="text" id="rua" size="30"></label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="numero">Nº</label>
+                        <input type="text" name="" id="numero" placeholder="" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Bairro:</label>
+                        <input name="bairro" type="text" id="bairro" size="20"></label>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Cidade:</label>
+                        <input name="cidade" type="text" id="cidade"></label>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Estado:</label>
+                        <input name="uf" type="text" id="uf" size="2"></label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="">E-Mail</label>
+                        <input type="email" name="email" id="emailCli" placeholder="nome@email.com">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="tel">Telefone</label>
+                        <input type="text" name="tel" id="telCli" placeholder="(xx) xxxx xxxx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cel">Celular</label>
+                        <input type="text" name="cel" id="celCli" placeholder="(xx) xxxxx xxxx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="">Tel recado</label>
+                        <input type="text" name="telRec" id="telRecCli" placeholder="(xx) xxxxx xxxxx">
+                    </div>
+
+
+                </div>
+
+                <div class="continue-button">
+                    <button type="button" class="btn btn-primary" id="btn-cadastrarPaciente">Cadastrar Paciente</button>             
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/cadastrarPaciente.js"></script>
+</body>
+</html>

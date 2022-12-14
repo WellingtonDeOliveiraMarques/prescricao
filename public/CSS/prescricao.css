@@ -1,0 +1,35 @@
+img{
+    height: 150px;
+    width: 150px;
+}
+
+#imgMed, #imgHosp{
+    width: 160px;
+}
+
+a.float:hover {
+    color: #FFF;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #8f95d3;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.my-float {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2.2rem;
+}
